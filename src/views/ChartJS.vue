@@ -5,20 +5,20 @@
     <div class="container">
       <BarChart />
     </div>
-
-    <h2>Pie Chart</h2>
-    <div class="container">
-      <PieChart />
-    </div>
     
     <h2>Line Chart</h2>
     <div class="container">
       <LineChart />
     </div>
 
+    <h2>Pie Chart</h2>
+    <div class="container">
+      <PieChart />
+    </div>
+
     <h2>Dough-nut Chart</h2>
     <div class="container">
-      <!-- <DoughChart /> -->
+      <DoughChart />
     </div>
 
     <h2>Bubble Chart</h2>
@@ -33,7 +33,7 @@
 
     <h2>Radar Chart</h2>
     <div class="container">
-      <RadarChart />
+      <!-- <RadarChart /> -->
     </div>
 
   </div>
