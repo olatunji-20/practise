@@ -8,6 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/chart-js">CHART.JS</RouterLink>
+        <RouterLink to="/vuelidate"> VUELIDATE</RouterLink>
       </nav>
     <RouterView />
 </template>

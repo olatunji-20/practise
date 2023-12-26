@@ -21,19 +21,19 @@
       <DoughChart />
     </div>
 
-    <h2>Bubble Chart</h2>
+    <!-- <h2>Bubble Chart</h2>
     <div class="container">
-      <!-- <BubbleChart /> -->
-    </div>
+      <BubbleChart />
+    </div> -->
 
     <h2>Polar-Area Chart</h2>
     <div class="container">
-      <!-- <PolarAreaChart /> -->
+      <PolarAreaChart />
     </div>
 
     <h2>Radar Chart</h2>
     <div class="container">
-      <!-- <RadarChart /> -->
+      <RadarChart />
     </div>
 
   </div>
