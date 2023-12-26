@@ -46,7 +46,7 @@ export default {
                         label: 'My Second Dataset',
                         data: [20, 12, 40, 95, 74, 35, 80],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
+                            'blue',
                             'rgba(255, 159, 64, 0.2)',
                             'rgba(255, 205, 86, 0.2)',
                             'rgba(75, 192, 192, 0.2)',

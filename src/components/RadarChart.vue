@@ -37,7 +37,8 @@ export default {
                         pointBorderColor: '#fff',
                         pointHoverBackgroundColor: '#fff',
                         pointHoverBorderColor: 'rgb(255, 99, 132)'
-                    }, {
+                    },
+                    {
                         label: 'My Second Dataset',
                         data: [28, 48, 40, 19, 96, 27, 100],
                         fill: true,
@@ -45,6 +46,17 @@ export default {
                         borderColor: 'rgb(54, 162, 235)',
                         pointBackgroundColor: 'rgb(54, 162, 235)',
                         pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(54, 162, 235)'
+                    },
+                    {
+                        label: 'My third Dataset',
+                        data: [88, 18, 20, 89, 26, 77, 10],
+                        fill: true,
+                        backgroundColor: 'greenyellow',
+                        borderColor: 'blue',
+                        pointBackgroundColor: 'green',
+                        pointBorderColor: 'red',
                         pointHoverBackgroundColor: '#fff',
                         pointHoverBorderColor: 'rgb(54, 162, 235)'
                     }]
