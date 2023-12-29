@@ -51,7 +51,7 @@ export default {
                     },
                     {
                         label: 'My third Dataset',
-                        data: [88, 18, 20, 89, 26, 77, 10],
+                        data: [88, 18, 20, 89, 26, 77, 40],
                         fill: true,
                         backgroundColor: 'greenyellow',
                         borderColor: 'blue',

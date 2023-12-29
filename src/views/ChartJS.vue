@@ -21,11 +21,6 @@
       <DoughChart />
     </div>
 
-    <!-- <h2>Bubble Chart</h2>
-    <div class="container">
-      <BubbleChart />
-    </div> -->
-
     <h2>Polar-Area Chart</h2>
     <div class="container">
       <PolarAreaChart />
@@ -40,13 +35,13 @@
 </template>
 
 <script>
-import BarChart from '@/components/BarChart.vue';
-import PieChart from '@/components/PieChart.vue';
-import LineChart from '@/components/LineChart.vue';
-import DoughChart from '@/components/DoughChart.vue';
-import BubbleChart from '@/components/BubbleChart.vue';
-import PolarAreaChart from '@/components/PolarAreaChart.vue';
-import RadarChart from '@/components/RadarChart.vue';
+import BarChart from '@/components/chartjs/BarChart.vue';
+import PieChart from '@/components/chartjs/PieChart.vue';
+import LineChart from '@/components/chartjs/LineChart.vue';
+import DoughChart from '@/components/chartjs/DoughChart.vue';
+import BubbleChart from '@/components/chartjs/BubbleChart.vue';
+import PolarAreaChart from '@/components/chartjs/PolarAreaChart.vue';
+import RadarChart from '@/components/chartjs/RadarChart.vue';
 
 export default {
     name: 'Chartjs',
