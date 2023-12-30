@@ -23,8 +23,8 @@ h1 {
 }
 .form {
   border: 2px solid blue;
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: auto;
   margin: 50px auto;
   border-radius: 10px;
 }

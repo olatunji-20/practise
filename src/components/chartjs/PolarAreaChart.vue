@@ -1,6 +1,5 @@
 <template>
     <div class="bar">
-        <!-- <p>sheriff sheriff BARCHART</p> -->
         <canvas id="polarChart"></canvas>
     </div>
 </template>
@@ -13,7 +12,6 @@ export default {
     name: 'PolarAreaChart',
     setup() {
         onMounted(() => {
-            console.log("lalalal");
             const ctx = document.getElementById("polarChart");
 
             const polarChart = new Chart(ctx, {
