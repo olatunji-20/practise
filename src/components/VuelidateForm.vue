@@ -103,5 +103,6 @@ button:hover {
 .error {
   color: red;
   text-align: left;
+  font-size: 12px;
 }
 </style>
