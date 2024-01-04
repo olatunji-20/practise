@@ -1,21 +1,25 @@
 <template>
   <form @submit.prevent="submitForm">
     <input v-model="userData.username" placeholder="username" type="text" />
+    <!-- FOR SINGLE ERRORS -->
     <p class="error" v-for="error in v$.username.$errors" :key="error.$uid">
       {{ error.$message }}
     </p>
 
     <input v-model="userData.email" placeholder="email" type="email" />
+    <!-- FOR SINGLE ERRORS -->
     <p class="error" v-for="error in v$.email.$errors" :key="error.$uid">
       {{ error.$message }}
     </p>
 
     <input v-model="userData.password" placeholder="password" type="password" />
+    <!-- FOR SINGLE ERRORS -->
     <p class="error" v-for="error in v$.password.$errors" :key="error.$uid">
       {{ error.$message }}
     </p>
 
     <input v-model="userData.confirmPassword" placeholder="confirm password" type="password" />
+    <!-- FOR SINGLE ERRORS -->
     <p class="error" v-for="error in v$.confirmPassword.$errors" :key="error.$uid">
       {{ error.$message }}
     </p>

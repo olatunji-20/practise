@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Chartjs from '../views/ChartJS.vue'
 import Vuelidate from '../views/Vuelidate.vue'
 import SwiperPage from '../views/SwiperPage.vue'
+import ProfilePage from '../views/ProfilePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/swiper-page',
       name: 'SwiperPage',
       component: SwiperPage
+    },
+    {
+      path: '/profile-page',
+      name: 'ProfilePage',
+      component: ProfilePage
     }
   ]
 })
