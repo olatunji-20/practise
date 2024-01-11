@@ -1,19 +1,13 @@
 <template>
   <div class="navbar">
-    <div class="logo"></div>
+    <router-link to="/"><div class="logo"></div></router-link>
     <div class="menu">
         <ul>
-            <li>menu</li>
-            <li>pages v </li>
-            <ul class="dropdown">
-                    <li>Home</li>
-                    <!--<li>About</li>
-                    <li>Chart.js</li>
-                    <li>Vuelidate</li>
-                    <li>Profile Page</li> -->
-            </ul>
-            <li>services</li>
-            <li>contacts</li>
+            <li><router-link to="/vuelidate">Vuelidate</router-link></li>
+            <li><router-link to="/chart-js">Chart.js</router-link></li>
+            <li><router-link to="/profile-page">Profile Page</router-link></li>
+            <!-- <li><router-link to="/vuelidate">SWIPER</router-link></li> -->
+            <li><router-link to="/email-js">Email.js</router-link></li>
         </ul>
     </div>
     <div class="auth">
@@ -60,6 +54,7 @@ export default {
     border: 2px solid blue;
     width: auto;
     height: auto;
+    position: relative;
 }
 .menu ul {
     display: flex;
@@ -67,7 +62,7 @@ export default {
 }
 .menu ul li {
     list-style-type: none;
-    padding: 0px 15px;
+    margin: 0px 15px;
 }
 .dropdown {
     border: 2px solid tomato;
@@ -75,7 +70,8 @@ export default {
     height: 200px;
     background: powderblue;
     position: absolute;
-    top: 85px;
+    /* display: hidden; */
+    top: 50px;
     /* left: 50px; */
 }
 .menu .dropdown ul li {
@@ -94,4 +90,97 @@ export default {
     width: 120px;
     height: 40px;
 }
+select {
+    border: 0px;
+}
 </style>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body style="background-color:white;">
+
+<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html> -->

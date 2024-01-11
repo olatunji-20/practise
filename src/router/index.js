@@ -4,6 +4,7 @@ import Chartjs from '../views/ChartJS.vue'
 import Vuelidate from '../views/Vuelidate.vue'
 import SwiperPage from '../views/SwiperPage.vue'
 import ProfilePage from '../views/ProfilePage.vue'
+import Emailjs from '../views/Emailjs.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,11 @@ const router = createRouter({
       path: '/profile-page',
       name: 'ProfilePage',
       component: ProfilePage
+    },
+    {
+      path: '/email-js',
+      name: 'Emailjs',
+      component: Emailjs
     }
   ]
 })
