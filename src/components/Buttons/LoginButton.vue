@@ -1,30 +1,39 @@
 <template>
-    <button @click="handleLogin">LOGIN</button>
-  </template>
+  <button @click="handleLogin">LOG IN</button>
+</template>
   
-  <script>
-  export default {
-      name: 'LoginButton',
-      setup() {
-        const handleLogin = () => {
-          alert("you just clicked on the LOGIN buton")
-        }
+<script>
+import { useAuth0 } from '@auth0/auth0-vue';
 
-        return {
-          handleLogin
+export default {
+  name: "LoginButton",
+  setup() {
+    const { loginWithRedirect } = useAuth0();
+
+    const handleLogin = () => {
+      loginWithRedirect({
+        appState: {
+          target: "/profile"
         }
-      }
+      });
+      // alert("you just clicked on the LOGIN buton");
+
+    };
+
+    return {
+      handleLogin,
+    };
+  },
+};
+</script>
   
-  }
-  </script>
-  
-  <style scoped>
-  button {
-    background: green;
-    width: 100%;
-    height: 100%;
-  }
-  button:hover {
-    cursor: pointer;
-  }
-  </style>
+<style scoped>
+button {
+  background: green;
+  width: 120px;
+  height: 40px;
+}
+button:hover {
+  cursor: pointer;
+}
+</style>

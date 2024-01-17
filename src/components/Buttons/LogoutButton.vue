@@ -21,8 +21,8 @@ export default {
 <style scoped>
 button {
     background: red;
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 40px;
 }
 button:hover {
     cursor: pointer;

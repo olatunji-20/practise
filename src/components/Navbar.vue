@@ -11,26 +11,25 @@
         </ul>
     </div>
     <div class="auth">
-        <div class="button">
-            <LoginButton />
-        </div>
-        <div class="button">
-            <SignupButton />
-        </div>
+      <LoginButton />
+      <SignupButton />
+      <!-- <LogoutButton /> -->
     </div>
   </div>
 </template>
 
 <script>
 import LoginButton from './Buttons/LoginButton.vue';
+import LogoutButton from './Buttons/LogoutButton.vue';
 import SignupButton from './Buttons/SignupButton.vue';
 
 export default {
     name: "Navbar",
     components: {
-        LoginButton,
-        SignupButton
-    }
+    LoginButton,
+    SignupButton,
+    LogoutButton
+}
 
 }
 </script>
@@ -80,15 +79,10 @@ export default {
 .auth {
     border: 2px solid yellowgreen;
     height: auto;
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.button {
-    border: 2px solid red;
-    width: 120px;
-    height: 40px;
 }
 select {
     border: 0px;

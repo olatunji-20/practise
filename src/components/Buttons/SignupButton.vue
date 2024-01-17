@@ -1,17 +1,30 @@
 <template>
-  <button @click="handleSignup">SIGNUP</button>
+  <button @click="handleSignUp">SIGNUP</button>
 </template>
 
 <script>
+import { useAuth0 } from '@auth0/auth0-vue';
+
 export default {
   name: "SignupButton",
   setup() {
-    const handleSignup = () => {
-      alert("you just clicked on the SIGNUP button.")
+    const { loginWithRedirect } = useAuth0();
+
+
+    const handleSignUp = () => {
+      loginWithRedirect({
+        appState: {
+          target: "/profile"
+        },
+        authorizationParams: {
+          screen_hint: "signup"
+        }
+      })
+      // alert("you just clicked on the SIGNUP button.");
     }
 
     return {
-      handleSignup
+      handleSignUp
     }
   }
 };
@@ -20,8 +33,9 @@ export default {
 <style scoped>
 button {
   background: greenyellow;
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 40px;
+  margin-left: 40px;
 }
 button:hover {
   cursor: pointer;
