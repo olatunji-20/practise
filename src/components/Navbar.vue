@@ -2,90 +2,100 @@
   <div class="navbar">
     <router-link to="/"><div class="logo"></div></router-link>
     <div class="menu">
-        <ul>
-            <li><router-link to="/vuelidate">Vuelidate</router-link></li>
-            <li><router-link to="/chart-js">Chart.js</router-link></li>
-            <li><router-link to="/profile-page">Profile Page</router-link></li>
-            <!-- <li><router-link to="/vuelidate">SWIPER</router-link></li> -->
-            <li><router-link to="/email-js">Email.js</router-link></li>
-        </ul>
+      <ul>
+        <li><router-link to="/vuelidate">Vuelidate</router-link></li>
+        <li><router-link to="/chart-js">Chart.js</router-link></li>
+        <li><router-link to="/profile-page">Profile Page</router-link></li>
+        <!-- <li><router-link to="/vuelidate">SWIPER</router-link></li> -->
+        <li><router-link to="/email-js">Email.js</router-link></li>
+      </ul>
     </div>
     <div class="auth">
-      <LoginButton />
-      <SignupButton />
-      <!-- <LogoutButton /> -->
+      <LoginButton v-if="!isAuthenticated"  />
+      <SignupButton v-if="!isAuthenticated" />
+      <LogoutButton v-if="isAuthenticated" />
     </div>
   </div>
 </template>
 
 <script>
-import LoginButton from './Buttons/LoginButton.vue';
-import LogoutButton from './Buttons/LogoutButton.vue';
-import SignupButton from './Buttons/SignupButton.vue';
+import { useAuth0 } from "@auth0/auth0-vue";
+
+import LoginButton from "./Buttons/LoginButton.vue";
+import LogoutButton from "./Buttons/LogoutButton.vue";
+import SignupButton from "./Buttons/SignupButton.vue";
 
 export default {
-    name: "Navbar",
-    components: {
+  name: "Navbar",
+  setup() {
+
+    const { isAuthenticated } = useAuth0();
+
+    return {
+      isAuthenticated
+    }
+
+  },
+  components: {
     LoginButton,
     SignupButton,
-    LogoutButton
-}
-
-}
+    LogoutButton,
+  },
+};
 </script>
 
 <style>
 .navbar {
-    border: 2px solid red;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  border: 2px solid red;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .logo {
-    border: 2px solid green;
-    width: 200px;
-    height: 60px;
+  border: 2px solid green;
+  width: 200px;
+  height: 60px;
 }
 .menu {
-    border: 2px solid blue;
-    width: auto;
-    height: auto;
-    position: relative;
+  border: 2px solid blue;
+  width: auto;
+  height: auto;
+  position: relative;
 }
 .menu ul {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .menu ul li {
-    list-style-type: none;
-    margin: 0px 15px;
+  list-style-type: none;
+  margin: 0px 15px;
 }
 .dropdown {
-    border: 2px solid tomato;
-    width: 120px;
-    height: 200px;
-    background: powderblue;
-    position: absolute;
-    /* display: hidden; */
-    top: 50px;
-    /* left: 50px; */
+  border: 2px solid tomato;
+  width: 120px;
+  height: 200px;
+  background: powderblue;
+  position: absolute;
+  /* display: hidden; */
+  top: 50px;
+  /* left: 50px; */
 }
 .menu .dropdown ul li {
-    display: block;
+  display: block;
 }
 .auth {
-    border: 2px solid yellowgreen;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  border: 2px solid yellowgreen;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 select {
-    border: 0px;
+  border: 0px;
 }
 </style>
 

@@ -3,11 +3,20 @@
 </template>
 
 <script>
+import { useAuth0 } from '@auth0/auth0-vue';
+
 export default {
     name: 'LogoutButton',
     setup() {
+      const { logout } = useAuth0();
+
       const handleLogout = () => {
-        alert("YOU JUSGT CLICKED THE LODOUT BUTTON")
+        logout({
+          logoutParams: {
+            returnTo: window.location.origin
+          }
+        });
+        
       }
 
       return {
