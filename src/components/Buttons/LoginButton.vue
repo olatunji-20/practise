@@ -13,7 +13,7 @@ export default {
     const handleLogin = () => {
       loginWithRedirect({
         appState: {
-          target: "/profile"
+          target: "/chart-js"
         }
       });
       // alert("you just clicked on the LOGIN buton");

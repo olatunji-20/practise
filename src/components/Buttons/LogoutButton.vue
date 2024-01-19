@@ -15,8 +15,7 @@ export default {
           logoutParams: {
             returnTo: window.location.origin
           }
-        });
-        
+        });        
       }
 
       return {

@@ -14,7 +14,7 @@ export default {
     const handleSignUp = () => {
       loginWithRedirect({
         appState: {
-          target: "/profile"
+          target: "/profile-page"
         },
         authorizationParams: {
           screen_hint: "signup"

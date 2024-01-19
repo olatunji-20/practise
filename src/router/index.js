@@ -1,10 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Chartjs from '../views/ChartJS.vue'
-import Vuelidate from '../views/Vuelidate.vue'
-import SwiperPage from '../views/SwiperPage.vue'
-import ProfilePage from '../views/ProfilePage.vue'
-import Emailjs from '../views/Emailjs.vue'
+import { authGuard } from '@auth0/auth0-vue';
+
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import Chartjs from '../views/ChartJS.vue';
+import Vuelidate from '../views/Vuelidate.vue';
+import SwiperPage from '../views/SwiperPage.vue';
+import ProfilePage from '../views/ProfilePage.vue';
+import Emailjs from '../views/Emailjs.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,7 +42,8 @@ const router = createRouter({
     {
       path: '/profile-page',
       name: 'ProfilePage',
-      component: ProfilePage
+      component: ProfilePage,
+      beforeEnter: authGuard
     },
     {
       path: '/email-js',
