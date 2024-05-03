@@ -7,6 +7,7 @@ import Vuelidate from '../views/Vuelidate.vue';
 import SwiperPage from '../views/SwiperPage.vue';
 import ProfilePage from '../views/ProfilePage.vue';
 import Emailjs from '../views/Emailjs.vue';
+import Paginate from '../views/Paginate.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,6 +50,11 @@ const router = createRouter({
       path: '/email-js',
       name: 'Emailjs',
       component: Emailjs
+    },
+    {
+      path: '/pagination-page',
+      name: 'paginate',
+      component: Paginate
     }
   ]
 })
