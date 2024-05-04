@@ -1,31 +1,31 @@
 <template>
   <main>
     <h4>PAGINATION</h4>
-    <p>{{ totalResults }}</p>
-    <p>{{ perPage }}</p>
-    <p>{{ totalPages }}</p>
-    <p>{{ currentPage }}</p>
-    <p>{{ maxVisibleButtons }}</p>
+    <p>total results {{ totalResults }}</p>
+    <p>per page{{ perPage }}</p>
+    <p>total page{{ totalPages }}</p>
+    <p>current page{{ currentPage }}</p>
+    <p>max vis{{ maxVisibleButtons }}</p>
   </main>
   <ul>
     <li>
-      <button type="button">first</button>
+      <button type="button" @click="onClickFirstPage" :disabled="isInFirstPage">first</button>
     </li>
     
     <li>
-      <button type="button">prev</button>
+      <button type="button" @click="onClickPreviousPage" :disabled="isInFirstPage">prev</button>
     </li>
 
     <li v-for="page in pages" :key="page.name" >
-      <button class="num" type="button" :disabled="page.isDisabled">{{ page.name }}</button>
+      <button class="num" type="button" @click="onClickPage(page.name)" :disabled="page.isDisabled" :class="{ active: isPageActive(page.name) }">{{ page.name }}</button>
     </li>
 
     <li>
-      <button type="button">next</button>
+      <button type="button" @click="onClickNextPage" :disabled="isInLastPage">next</button>
     </li>
 
     <li>
-      <button type="button">last</button>
+      <button type="button" @click="onClickLastPage" :disabled="isInLastPage">last</button>
     </li>
 
   </ul>
@@ -50,14 +50,19 @@ export default {
         // when on the last page
 
         if (this.currentPage === this.totalPages) {
-          return this.totalPages - this.maxVisibleButtons;
+          const start = this.totalPages - (this.maxVisibleButtons - 1);
+
+          if (start === 0) {
+            return 1;
+          }else {
+            return start;
+          }
         }
 
         // when inbetween
 
-        return this.currentPage -1;
+        // return this.currentPage -1;
       },
-
       pages() {
         const range = [];
 
@@ -68,6 +73,14 @@ export default {
           });
         }
         return range;
+      },
+
+      isInFirstPage() {
+        return this.currentPage === 1;
+      },
+
+      isInLastPage() {
+        return this.currentPage === this.totalPages;
       }
     },
     props: {
@@ -89,6 +102,26 @@ export default {
       },
       maxVisibleButtons: {
         type: Number
+      }
+    },
+    methods: {
+      onClickFirstPage() {
+        this.$emit('pagechanged', 1);
+      },
+      onClickPreviousPage() {
+        this.$emit('pagechanged', this.currentPage - 1);
+      },
+      onClickPage(page) {
+        this.$emit('pagechanged', page);
+      },
+      onClickNextPage() {
+        this.$emit('pagechanged', this.currentPage + 1);
+      },
+      onClickLastPage() {
+        this.$emit('pagechanged', this.totalPages);
+      },
+      isPageActive(page) {
+        return this.currentPage === page;
       }
     }
 
@@ -126,5 +159,9 @@ li {
   background: teal;
   border-radius: 50%;
   margin: 0px 5px;
+}
+.active {
+  background: green;
+  color: red;
 }
 </style>
