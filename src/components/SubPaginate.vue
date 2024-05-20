@@ -61,7 +61,7 @@ export default {
 
         // when inbetween
 
-        // return this.currentPage -1;
+        return this.currentPage - 1;
       },
       pages() {
         const range = [];
@@ -156,12 +156,14 @@ li {
 .num {
   width: 30px;
   height: 30px;
-  background: teal;
+  border: 0;
+  background: tomato;
   border-radius: 50%;
-  margin: 0px 5px;
+  margin: 0px 3px;
 }
 .active {
   background: green;
-  color: red;
+  color: white;
+  border: 0px;
 }
 </style>
