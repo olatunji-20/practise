@@ -7,6 +7,14 @@
     props to the child components.
   </p>
 
+  <!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
+
+  <div class="n">
+    <h3 class="names" v-for="item in postsForDisplay" :key="item.id"> {{ item.name }} </h3>
+  </div>
+
+
+  <!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
   <SubPaginate
     :totalResults="totalResults"
     :perPage="perPage"
@@ -16,16 +24,16 @@
     @pagechanged="onPageChange"
   />
 
-  <h1>Players: {{ players }}</h1>
-  <h1>totalResults: {{ players.length }}</h1>
-  <h1>perPage: {{ perPage }}</h1>
-  <h1>totalPages: {{ totalPages }}</h1>
-  <h1>currentPage: {{ currentPage }}</h1>
-  <h1>maxVisibleButtons: {{ maxVisibleButtons }}</h1>
+  <!-- <h1>Players: {{ players }}</h1> -->
+  <h6>totalResults: {{ players.length }}</h6>
+  <h6>perPage: {{ perPage }}</h6>
+  <h6>totalPages: {{ totalPages }}</h6>
+  <h6>currentPage: {{ currentPage }}</h6>
+  <h6>maxVisibleButtons: {{ maxVisibleButtons }}</h6>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import SubPaginate from "@/components/SubPaginate.vue";
 
 export default {
@@ -117,6 +125,13 @@ export default {
       currentPage.value = page;
     }
 
+    const postsForDisplay = computed(() => {
+      let startIndex = perPage.value * (currentPage.value - 1);
+      let endIndex = startIndex + perPage.value;
+
+      return players.value.slice(startIndex, endIndex);
+    })
+
     return {
       players,
       totalResults,
@@ -124,7 +139,8 @@ export default {
       totalPages,
       currentPage,
       maxVisibleButtons,
-      onPageChange
+      onPageChange,
+      postsForDisplay
     };
   },
   components: {
@@ -137,5 +153,15 @@ export default {
 <style>
 p {
   color: red;
+}
+.n {
+  border: 3px solid blue;
+  width: 500px;
+  height: auto;
+  margin: 50px auto;
+  text-align: center;
+}
+.names {
+  margin: 5px auto;
 }
 </style>

@@ -1,19 +1,19 @@
 <template>
-  <main>
+  <!-- <main>
     <h4>PAGINATION</h4>
     <p>total results {{ totalResults }}</p>
     <p>per page{{ perPage }}</p>
     <p>total page{{ totalPages }}</p>
     <p>current page{{ currentPage }}</p>
     <p>max vis{{ maxVisibleButtons }}</p>
-  </main>
+  </main> -->
   <ul>
     <li>
-      <button type="button" @click="onClickFirstPage" :disabled="isInFirstPage">first</button>
+      <button class="nav" type="button" @click="onClickFirstPage" :disabled="isInFirstPage">first</button>
     </li>
     
     <li>
-      <button type="button" @click="onClickPreviousPage" :disabled="isInFirstPage">prev</button>
+      <button class="nav" type="button" @click="onClickPreviousPage" :disabled="isInFirstPage">prev</button>
     </li>
 
     <li v-for="page in pages" :key="page.name" >
@@ -21,11 +21,11 @@
     </li>
 
     <li>
-      <button type="button" @click="onClickNextPage" :disabled="isInLastPage">next</button>
+      <button class="nav" type="button" @click="onClickNextPage" :disabled="isInLastPage">next</button>
     </li>
 
     <li>
-      <button type="button" @click="onClickLastPage" :disabled="isInLastPage">last</button>
+      <button class="nav" type="button" @click="onClickLastPage" :disabled="isInLastPage">last</button>
     </li>
 
   </ul>
@@ -129,12 +129,12 @@ export default {
 </script>
 
 <style scoped>
-main {
+/* main {
     border: 4px solid green;
     height: 400px;
     width: 600px;
     margin: 50px auto;
-}
+} */
 
 p {
   font-size: 35px;
@@ -147,12 +147,22 @@ ul {
   border: 2px solid green;
   width: 650px;
   margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
   display: inline-block;
   margin: 0px 15px;
 }
+
+.nav {
+  background: pink;
+  cursor: pointer;
+}
+
 .num {
   width: 30px;
   height: 30px;
@@ -160,7 +170,9 @@ li {
   background: tomato;
   border-radius: 50%;
   margin: 0px 3px;
+  cursor: pointer;
 }
+
 .active {
   background: green;
   color: white;
