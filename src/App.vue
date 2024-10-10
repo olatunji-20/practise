@@ -2,9 +2,11 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue'
+import Toaster from '@/components/ui/toast/Toaster.vue'
 </script>
 
 <template>
+  <Toaster />
   <Navbar />
     <RouterView />
 </template>
