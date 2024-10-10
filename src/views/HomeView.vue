@@ -7,6 +7,7 @@
     <h4>26<sup>th</sup> - DEC - 2023.</h4>
     <router-link to="/pagination-page">PAGINATE</router-link>
     <router-link to="/carousel-page">CAROUSEL</router-link>
+    <router-link to="/shadcn-page">SHADCN-VUE</router-link>
   </main>
 </template>
 

@@ -6,14 +6,6 @@ import Navbar from './components/Navbar.vue'
 
 <template>
   <Navbar />
-      <!-- <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/chart-js">CHART.JS</RouterLink>
-        <RouterLink to="/vuelidate"> VUELIDATE</RouterLink>
-        <RouterLink to="/swiper-page"> SWIPER</RouterLink>
-        <RouterLink to="/profile-page"> PROFILE</RouterLink>
-      </nav> -->
     <RouterView />
 </template>
 

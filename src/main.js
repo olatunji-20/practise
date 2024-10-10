@@ -1,4 +1,5 @@
 // import './assets/main.css'
+import './index.css'
 
 import { createAuth0 } from '@auth0/auth0-vue';
 import { createApp } from 'vue'
