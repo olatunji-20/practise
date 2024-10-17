@@ -1,12 +1,12 @@
 <template>
     <div class="border-4 border-red-400">
-        <h1 class="text-red-400 text-5xl text-center font-bold my-8">PAGE FOR SHADCN</h1>
+        <h1 class="text-tunji-purple text-5xl text-center font-bold my-8">PAGE FOR SHADCN</h1>
 
         <div class="border-2 border-blue-500 p-4">            
             <Button>Button</Button>
         </div>
 
-        <div class="border-2 border-purple-500 w-[600px] rounded-xl mx-auto p-4 my-4">
+        <div class="border-2 bg-tunji-green border-purple-500 w-[600px] rounded-xl mx-auto p-4 my-4">
             <Accordion type="single" class="w-full" collapsible :default-value="defaultValue">
                 <AccordionItem v-for="item in accordionItems" :key="item.value" :value="item.value">
                 <AccordionTrigger class="text-blue-800">{{ item.title }}</AccordionTrigger>
@@ -36,7 +36,7 @@
             </Button>
         </div>
         
-        <div class="border-2 border-red-500 w-[600px] mx-auto my-4 rounded-xl p-2">
+        <div class="border-2 border-red-500 w-[600px] mx-auto my-4 rounded-xl p-27">
             <LineChart
                 :data="data"
                 index="year"

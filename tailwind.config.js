@@ -56,6 +56,14 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        tunji: {
+          white: "#FFFFFF",
+          lilac: "#EDEDF7",
+          purple: "#4949AC",
+          gray: "#F5F5FA",
+          green: "#00E198",
+          dark: "#6a6c77", // use for text
+        }
       },
       borderRadius: {
       	xl: "calc(var(--radius) + 4px)",
