@@ -9,6 +9,7 @@ import ProfilePage from '../views/ProfilePage.vue';
 import Emailjs from '../views/Emailjs.vue';
 import Paginate from '../views/Paginate.vue';
 import Carousel from '../views/Carousel.vue';
+import MultiAccount from '../views/MultiAccount.vue';
 import Shadcn from '../views/Shadcn.vue';
 
 const router = createRouter({
@@ -61,7 +62,7 @@ const router = createRouter({
     {
       path: '/carousel-page',
       name: 'carousel',
-      component: Carousel
+      component: MultiAccount
     },
     {
       path: '/shadcn-page',
