@@ -3,13 +3,15 @@ import './index.css'
 
 import { createAuth0 } from '@auth0/auth0-vue';
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-
+const pinia = createPinia();
 const app = createApp(App)
 
-app.use(router)
+app.use(router);
+app.use(pinia);
 
 app.use(
     createAuth0({
