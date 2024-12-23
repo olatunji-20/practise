@@ -11,6 +11,7 @@ import Paginate from '../views/Paginate.vue';
 import Carousel from '../views/Carousel.vue';
 import MultiAccount from '../views/MultiAccount.vue';
 import Shadcn from '../views/Shadcn.vue';
+import Gojjo from '../views/Gojjo.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +69,11 @@ const router = createRouter({
       path: '/shadcn-page',
       name: 'shadcn',
       component: Shadcn
+    },
+    {
+      path: '/gojjo',
+      name: 'gojjo',
+      component: Gojjo
     }
   ]
 })
