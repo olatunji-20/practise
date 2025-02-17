@@ -1,7 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "../../.."
+			"path": "../../../../../../Downloads/texia_front-demo-new/texia_front-demo-new"
+		},
+		{
+			"path": "../../../../../control-shield-frontend"
+		},
+		{
+			"path": "../.."
 		}
 	],
 	"settings": {}

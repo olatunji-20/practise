@@ -3,12 +3,16 @@
 <template>
   <main>
     <h1>FALANA SHERIFF OLATUNJI</h1>
-    <p>This project was created as a playground just to practise new vue.js libraries before using them in real projects.</p>
+    <p>
+      This project was created as a playground just to practise new vue.js
+      libraries before using them in real projects.
+    </p>
     <h4>26<sup>th</sup> - DEC - 2023.</h4>
     <router-link to="/pagination-page">PAGINATE</router-link>
     <router-link to="/carousel-page">CAROUSEL</router-link>
     <router-link to="/shadcn-page">SHADCN-VUE</router-link>
     <router-link to="/gojjo">GOJJO</router-link>
+    <router-link to="/file-uploader">FILE UPLOADER</router-link>
   </main>
 </template>
 

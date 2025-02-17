@@ -12,6 +12,7 @@ import Carousel from '../views/Carousel.vue';
 import MultiAccount from '../views/MultiAccount.vue';
 import Shadcn from '../views/Shadcn.vue';
 import Gojjo from '../views/Gojjo.vue';
+import FileUploader from '../views/FileUpload.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +75,11 @@ const router = createRouter({
       path: '/gojjo',
       name: 'gojjo',
       component: Gojjo
+    },
+    {
+      path: '/file-uploader',
+      name: 'file',
+      component: FileUploader
     }
   ]
 })

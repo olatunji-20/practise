@@ -11,7 +11,7 @@
       </ul>
     </div>
     <div class="auth">
-      <LoginButton v-if="!isAuthenticated"  />
+      <LoginButton v-if="!isAuthenticated" />
       <SignupButton v-if="!isAuthenticated" />
       <LogoutButton v-if="isAuthenticated" />
     </div>
@@ -28,13 +28,11 @@ import SignupButton from "./Buttons/SignupButton.vue";
 export default {
   name: "Navbar",
   setup() {
-
     const { isAuthenticated } = useAuth0();
 
     return {
-      isAuthenticated
-    }
-
+      isAuthenticated,
+    };
   },
   components: {
     LoginButton,
@@ -98,12 +96,6 @@ select {
   border: 0px;
 }
 </style>
-
-
-
-
-
-
 
 <!-- <!DOCTYPE html>
 <html>
