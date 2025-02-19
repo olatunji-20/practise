@@ -14,6 +14,7 @@ export async function uploadFile(file, url) {
 }
 
 export function uploadFiles(files, url) {
+    console.log(files)
     return Promise.all(files.map((file) => uploadFile(file, url)))
 }
 

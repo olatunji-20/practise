@@ -19,9 +19,9 @@
       v-show="file.status == false"
       >Error</span
     >
-    <button @click.prevent="uploadFiles(files)" class="upload-button">
+    <!-- <button @click.prevent="uploadFiles(files)" class="upload-button">
       Upload
-    </button>
+    </button> -->
   </component>
 </template>
 

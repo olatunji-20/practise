@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-64">
+  <div class="mb-64 text-center">
     <h1 class="text-center text-6xl font-semibold py-8">file uploader</h1>
     <UploadZone
       class="drop-area"
@@ -37,7 +37,10 @@
         />
       </ul>
     </UploadZone>
-    <button @click.prevent="uploadFiles(files)" class="upload-button">
+    <button
+      @click.prevent="uploadFiles(files)"
+      class="upload-button mx-auto border p-2 mt-4"
+    >
       Upload
     </button>
   </div>
@@ -50,7 +53,7 @@ import FilePreview from "@/components/FilePreview.vue";
 import useUploader from "@/composables/useUploader";
 
 const { files, addFiles, removeFile } = useFile();
-const { uploadFile, uploadFiles } = useUploader("URL");
+const { uploadFile, uploadFiles } = useUploader();
 
 const onInputChange = (e) => {
   addFiles(e.target.files);
